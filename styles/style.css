@@ -1,0 +1,27 @@
+body{
+    background-color: azure;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: green;
+    max-width: 500px;
+    height: 100vh;
+}
+
+.text-field{
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.document-type{
+
+    
+
+}
