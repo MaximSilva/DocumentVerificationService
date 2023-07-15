@@ -1,100 +1,140 @@
 body{
     background-color: azure;
     font-family: 'Roboto Mono', monospace;
-    margin: 0;
+    margin: 0 auto;
     padding: 20px;
     position: relative;
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: green;
-    max-width: 500px;
-    height: 100vh;
+ul,
+li,
+dl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #009867;
+  max-width: 500px;
+  height: 100vh;
+  padding: 20px;
+  
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  padding-left: 520px;
+}
+
 
 .text-field{
     margin-top: 10px;
     color: #ffffff;
 }
-.container2 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-  }
-  
+ 
   .document {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
   }
   
-  .document h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
-  .document p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .document ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .document ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
+  .document-label {
+    margin: 0;
   }
   
   .files {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+
   }
   
-  input {
-    width: 100px;
-    height: 50px;
-    border-radius: 8px;
-    margin: 10px;
+  .files label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
   }
-
+  
   .buttons {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     border-radius: 8px;
-    margin: 10x;
+    margin: 10px;
     padding: 20px;
-    
+    gap: 30px;
   }
   
   .back {
     background-color: azure;
+    border: #fff;
     width: 100px;
     height: 50px;
     border-radius: 8px;
-    margin: 10x;
     outline: 1px solid black;
   }
   
   .next {
-    background-color: #00f;
+    background-color: #0076ff;
+    border: #0076ff;
     color: #fff;
-    width: 100px;
+    width: 120px;
     height: 50px;
-    margin: 10x;
     border-radius: 8px;
   }
   
   .next:hover {
     cursor: pointer;
   }
-

@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet"> 
 <body>
-
     <div class="container", id="green-container">
 
         <div class="text-field">
@@ -16,40 +15,36 @@
             <h4>Верифікація даних</h4>
             <h2>Крок 1</h1>
             <h4>Оберіть тип бланку для верифікації</h4>
-
+          
         </div>
-
-
-    </div>
-
-    <div class="container2">
-        <div class="document", id="document-type">
-            <p><b>Оберіть пункт зі списку нижче: </b></p>
-            <select id="documentTypeSelect">
-                <option value="СпРТЗ">Свідоцтво про реєстрацію машини (СпРТЗ)</option>
-                <option value="ПВ">Посвідчення водія (ПВ)</option>
-            </select>
-            <button onclick="showDocumentActions()">Підтвердити</button>
-
+        <div class = "container2">
+            <div class="document" id="document-type">
+            <p><b>Оберіть пункт зі списку нижче:</b></p>
+            <div class="radio-option">
+              <input type="radio" id="reg" name="document-type" />
+              <label for="reg" class="document-label">Свідоцтво про реєстрацію машини (СпРТЗ)</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="driver" name="document-type" />
+              <label for="driver" class="document-label">Посвідчення водія (ПВ)</label>
+            </div>
+          
             <div class="files">
-                <label for="front">
-                    <input type="file" name="front" />
-                    <p>Зворотній бік</p>
-                  </label>
-                  <label for="back">
-                    <input type="file" name="back" />
-                    <p>Лицьовий бік</p>
-                  </label>
-              </div>
-    
-            <div class="buttons", id="buttons">
-                <button class="back">Назад</button>
-                <button class="next">Далі</button>
-              </div>
+              <label for="front">
+                <input type="file" name="front" />
+                <span>Зворотній бік</span>
+              </label>
+              <label for="back">
+                <input type="file" name="back" />
+                <span>Лицьовий бік</span>
+              </label>
+            </div>
+          
+            <div class="buttons" id="buttons">
+              <button class="back">Назад</button>
+              <button class="next">Далі</button>
+            </div>
+          </div>
         </div>
-    </div>
-    
-       
-    
 </body>
 </html>
