@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
+    </head> 
 <body>
     <div class="container", id="green-container">
 
@@ -17,8 +18,8 @@
             <h4>Оберіть тип бланку для верифікації</h4>
           
         </div>
-        <div class = "container2">
-            <div class="document" id="document-type">
+        <div class="container2">
+          <div class="document" id="document-type">
             <p><b>Оберіть пункт зі списку нижче:</b></p>
             <div class="radio-option">
               <input type="radio" id="reg" name="document-type" />
@@ -28,7 +29,6 @@
               <input type="radio" id="driver" name="document-type" />
               <label for="driver" class="document-label">Посвідчення водія (ПВ)</label>
             </div>
-          
             <div class="files">
               <label for="front">
                 <input type="file" name="front" />
@@ -39,12 +39,61 @@
                 <span>Лицьовий бік</span>
               </label>
             </div>
-          
-            <div class="buttons" id="buttons">
-              <button class="back">Назад</button>
-              <button class="next">Далі</button>
+            <div class="additional-panels">
+              <div class="panel">
+                <label for="series">Серія:</label>
+                <input type="text" id="series" name="series" />
+              </div>
+              <div class="panel">
+                <label for="number">Номер:</label>
+                <input type="text" id="number" name="number" />
+              </div>
+              <div class="panel">
+                <label for="date">Дата видачі:</label>
+                <input type="text" id="date" name="date" />
+                <button id="calendar">Календар</button>
+              </div>
+              <div class="panel">
+                <label for="issuer">Ким видано:</label>
+                <input type="text" id="issuer" name="issuer" />
+              </div>
             </div>
           </div>
         </div>
-</body>
+
+            
+          
+            <div class="buttons" id="buttons">
+              <button class="back">Назад</button>
+              <a href="second-page.html"><button class="next">Далі</button>
+            </div>
+          </div>
+        </div>
+        <script>
+          const regRadio = document.getElementById('reg');
+          const driverRadio = document.getElementById('driver');
+          const filesContainer = document.querySelector('.files');
+          const additionalPanels = document.querySelector('.additional-panels');
+      
+          regRadio.addEventListener('change', () => {
+            if (regRadio.checked) {
+              filesContainer.style.display = 'block';
+              additionalPanels.style.display = 'block';
+            } else {
+              filesContainer.style.display = 'none';
+              additionalPanels.style.display = 'none';
+            }
+          });
+      
+          driverRadio.addEventListener('change', () => {
+            if (driverRadio.checked) {
+              filesContainer.style.display = 'block';
+              additionalPanels.style.display = 'block';
+            } else {
+              filesContainer.style.display = 'none';
+              additionalPanels.style.display = 'none';
+            }
+          });
+        </script>
+   </body>
 </html>
