@@ -61,7 +61,7 @@
         </div>
       </div>
         <div class="buttons" id="buttons">
-          <button class="back">Назад</button>
+          <a href="second-page.html"><button class="back">Назад</button>
           <a href="fourth-page.html"><button class="next">Далі</button>
         </div>
        
@@ -75,6 +75,7 @@
           docID.addEventListener('change', () => {
             if (docID.checked) {
               filesContainer.style.display = 'block';
+              filesContainer2.style.display = 'none';
               
             } else {
               filesContainer.style.display = 'none';
