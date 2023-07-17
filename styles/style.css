@@ -4,6 +4,7 @@ body{
     margin: 0 auto;
     padding: 20px;
     position: relative;
+    
   
 }
 * {
@@ -46,6 +47,12 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.table{
+  margin: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
 .container {
   position: fixed;
   top: 0;
@@ -62,6 +69,7 @@ input::-webkit-inner-spin-button {
   justify-content: space-between; 
   align-items: flex-start;
   padding-left: 520px;
+  width: 100vw;
 }
 
 

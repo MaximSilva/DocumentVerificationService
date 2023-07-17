@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
     </head> 
 <body>
+  
     <div class="container", id="green-container">
 
         <div class="text-field">
@@ -39,27 +40,23 @@
                 <span>Лицьовий бік</span>
               </label>
             </div>
-            <div class="additional-panels">
-              <div class="panel">
-                <label for="series">Серія:</label>
-                <input type="text" id="series" name="series" />
-              </div>
-              <div class="panel">
-                <label for="number">Номер:</label>
-                <input type="text" id="number" name="number" />
-              </div>
-              <div class="panel">
-                <label for="date">Дата видачі:</label>
-                <input type="text" id="date" name="date" />
-                <button id="calendar">Календар</button>
-              </div>
-              <div class="panel">
-                <label for="issuer">Ким видано:</label>
-                <input type="text" id="issuer" name="issuer" />
-              </div>
-            </div>
+            <div class="input-fields">
+              <table>
+                  <tr>
+                      <td><input type="text" placeholder="Серія"></td>
+                      <td><input type="text" placeholder="Номер"></td>
+                  </tr>
+                  <tr>
+                      <td><input type="date" placeholder="Дата видачі"></td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" placeholder="Ким видано"></td>
+                  </tr>
+              </table>
+          </div>
           </div>
         </div>
+     
 
             
           
