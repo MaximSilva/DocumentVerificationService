@@ -11,115 +11,131 @@
 <body>
   <sidebar class="sidebar">
     <div class="text-field">
+        <p class="sidebar__title" id="title"></p>
+        <p class="sidebar__subtitle" id="subTitle"></p>
+        <p class="sidebar__description" id="description"></p>
+    </div>
+    <ul class="nav">
+        <li class="nav__item"><span>1</span>Тип бланку</li>
+        <li class="nav__item"><span>2</span>РНОКПП</li>
+        <li class="nav__item"><span>3</span>Фото Паспорта</li>
+        <li class="nav__item"><span>4</span>Підтвердження даних</li>
+        <li class="nav__item"><span>5</span>Електронний підпис</li>
+    </ul>
+</sidebar>
+<main>
+  <div class="step step-first">
+      <h1 class="step__title">Оберіть пункт зі списку нижче:</h1>
+      <div class="radio-option">
+          <input type="radio" id="step__reg-first" name="document-type" />
+          <label for="reg" class="document-label">Свідоцтво про реєстрацію машини (СпРТЗ)</label>
+      </div>
+      <div class="radio-option">
+          <input type="radio" id="driver" name="document-type" />
+          <label for="driver" class="document-label">Посвідчення водія (ПВ)</label>
+      </div>
+      <div class="files">
+          <label for="front">
+              <input type="file" name="front" />
+              <span>Зворотній бік</span>
+          </label>
+          <label for="back">
+              <input type="file" name="back" />
+              <span>Лицьовий бік</span>
+          </label>
+      </div>
+      <div class="input-fields">
+          <table>
+              <tr>
+                  <td><input type="text" placeholder="Серія" /></td>
+                  <td><input type="text" placeholder="Номер" /></td>
+              </tr>
+              <tr>
+                  <td><input type="date" placeholder="Дата видачі" /></td>
+              </tr>
+              <tr>
+                  <td><input type="text" placeholder="Ким видано" /></td>
+              </tr>
+          </table>
+      </div>
+  </div>
 
-  
-    <div class="container", id="green-container">
+  <div class="step step-second">
+      <h1 class="step__title">Введіть свої дані:</h1>
+      <div class="input-fields">
+          <table>
+              <tr>
+                  <td><input type="text" placeholder="Електронна пошта" /></td>
+                  <td><input type="text" placeholder="Телефон" /></td>
+              </tr>
+              <tr>
+                  <td><input type="text" placeholder="Серія" /></td>
+                  <td><input type="text" placeholder="Номер" /></td>
+                  <td><input type="date" /></td>
+              </tr>
+              <tr>
+                  <td><input type="text" placeholder="Особа, яка видала" /></td>
+              </tr>
+          </table>
+      </div>
+  </div>
 
-        <div class="text-field">
+  <div class="step step-third">
+      <h1 class="step__title">Паспорт:</h1>
+      <div class="radio-option">
+          <input type="radio" id="reg" name="document-type" />
+          <label for="reg" class="document-label">Паспорт громадянина України(у формі ID карти)</label>
+      </div>
+      <div class="radio-option">
+          <input type="radio" id="driver" name="document-type" />
+          <label for="driver" class="document-label">Паспорт громадянина України</label>
+      </div>
+      <div class="files">
+          <label for="front">
+              <input type="file" name="front" />
+              <span>Лицьовий бік</span>
+          </label>
+          <label for="back">
+              <input type="file" name="back" />
+              <span>Зворотній бік</span>
+          </label>
+      </div>
+      <div class="files2">
+          <label for="firstpage">
+              <input type="file" name="firstpage" />
+              <span>Перша сторінка(кому виданий)</span>
+          </label>
+          <label for="secondpage">
+              <input type="file" name="secondpage" />
+              <span>Друга сторінка(ким/коли/де виданий)</span>
+          </label>
+          <label for="photopage">
+              <input type="file" name="photopage" />
+              <span>Сторінка з фотографією, яка відповідає актуальному віку</span>
+          </label>
+          <label for="regpage">
+              <input type="file" name="regpage" />
+              <span>Сторінка з зазначенням, місця реєстрації</span>
+          </label>
+      </div>
+  </div>
 
-            <h4>Верифікація даних</h4>
-            <h2>Крок 1</h1>
-            <h4>Оберіть тип бланку для верифікації</h4>
+  <div class="step step-fourth">
+      <h1 class="step__title">Оберіть пункт зі списку нижче:</h1>
+  </div>
 
-            <div class="slider">
-              <div class="nav">
-                <div class="nav-item active">
-                  <span class="line"></span>
-                  <span class="text">Пункт 1</span>
-                </div>
-                <div class="nav-item">
-                  <span class="line"></span>
-                  <span class="text">Пункт 2</span>
-                </div>
-                <div class="nav-item">
-                  <span class="line"></span>
-                  <span class="text">Пункт 3</span>
-                </div>
-                <div class="nav-item">
-                  <span class="line"></span>
-                  <span class="text">Пункт 4</span>
-                </div>
-                <div class="nav-item">
-                  <span class="line"></span>
-                  <span class="text">Пункт 5</span>
-                </div>
-              </div>
-            </div>
-            
-            
+  <div class="step step-fifth">
+      <h1 class="step__title">Введіть свої дані:</h1>
+  </div>
 
-        </div>
-        <div class="container2">
-          <div class="document" id="document-type">
-            <p><b>Оберіть пункт зі списку нижче:</b></p>
-            <div class="radio-option">
-              <input type="radio" id="reg" name="document-type" />
-              <label for="reg" class="document-label">Свідоцтво про реєстрацію машини (СпРТЗ)</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" id="driver" name="document-type" />
-              <label for="driver" class="document-label">Посвідчення водія (ПВ)</label>
-            </div>
-            <div class="files">
-              <label for="front">
-                <input type="file" name="front" />
-                <span>Зворотній бік</span>
-              </label>
-              <label for="back">
-                <input type="file" name="back" />
-                <span>Лицьовий бік</span>
-              </label>
-            </div>
-            <div class="input-fields">
-              <table>
-                  <tr>
-                      <td><input type="text" placeholder="Серія"></td>
-                      <td><input type="text" placeholder="Номер"></td>
-                  </tr>
-                  <tr>
-                      <td><input type="date" placeholder="Дата видачі"></td>
-                  </tr>
-                  <tr>
-                      <td><input type="text" placeholder="Ким видано"></td>
-                  </tr>
-              </table>
-          </div>
-          </div>
-        </div>
+  <div class="control">
+      <button class="control__button control__button_prev" id="prevButton">Назад</button>
+      <button class="control__button control__button_next" id="nextButton">Наступний крок</button>
+  </div>
+</main>
 
-            <div class="buttons" id="buttons">
-              <button class="back", id="prevButton">Назад</button>
-              <a href="second-page.html", id="nextButton"><button class="next">Далі</button>
-              <div id="root"></div>
-            </div>
-          </div>
-        </div>
-        <script>
-          const regRadio = document.getElementById('reg');
-          const driverRadio = document.getElementById('driver');
-          const filesContainer = document.querySelector('.files');
-          const additionalPanels = document.querySelector('.additional-panels');
-      
-          regRadio.addEventListener('change', () => {
-            if (regRadio.checked) {
-              filesContainer.style.display = 'block';
-              additionalPanels.style.display = 'block';
-            } else {
-              filesContainer.style.display = 'none';
-              additionalPanels.style.display = 'none';
-            }
-          });
-      
-          driverRadio.addEventListener('change', () => {
-            if (driverRadio.checked) {
-              filesContainer.style.display = 'block';
-              additionalPanels.style.display = 'block';
-            } else {
-              filesContainer.style.display = 'none';
-              additionalPanels.style.display = 'none';
-            }
-          });
-        </script>
-         <script src="slider.js"></script>
-   </body>
+<script src="scripts/services/renderService.js"></script>
+<script src="scripts/services/firstStepService.js"></script>
+<script src="scripts/services/thirdStepService.js"></script>
+</body>
 </html>

@@ -1,11 +1,9 @@
-body{
-    background-color: azure;
-    font-family: 'Roboto Mono', monospace;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    
-  
+body {
+  background-color: azure;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  display: flex;   
+  min-height: 100vh;
 }
 * {
   margin: 0;
@@ -41,199 +39,213 @@ p {
   padding: 0;
 }
 
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 20px;
+  width: 100%;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.table{
-  margin: 10px;
-  column-gap: 10px;
-  row-gap: 10px;
+.sidebar {    
+  padding: 32px;
+  background-color: #009867;
+  color: white;
 }
 
-.slider {
-  display: inline-block;
-  flex-direction: flex;
-  position: relative;
-  vertical-align: middle;
-  height: 100px;
+.sidebar__title {
+  font-size: 18px;
+}
+
+.sidebar__subtitle {
+  font-size: 24px;
+  margin-top: 32px;
+}
+
+.sidebar__description {
+  margin-top: 24px;
+  font-size: 18px;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  flex-direction: column;
+  color: white;
+  margin-top: 32px;
+  gap: 48px;
 }
 
-.nav-item {
+.nav__item {
   position: relative;
-}
-
-.line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ccc;
-  transform: translateY(-50%);
-}
-
-.nav-item.active .line {
-  background-color: #fff;
-}
-
-.text {
-  margin-top: 10px;
-}
-.container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #009867;
-  max-width: 500px;
-  height: 100vh;
-  padding: 20px;
-  
-}
-
-.container2 {
   display: flex;
-  justify-content: space-between; 
-  align-items: flex-start;
-  padding-left: 520px;
-  width: 100vw;
+  align-items: center;
+  gap: 16px;
+  opacity: 0.5;
+  font-size: 14px;
 }
 
-
-.text-field{
-    margin-top: 10px;
-    color: #ffffff;
+.nav__item-active {
+  opacity: 1;
 }
- 
-  .document {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 29px;
-    border-radius: 8px;
-    max-width: 500px;
-    margin-top: -77px;
-    margin-right: -358px;
-    gap: 39px;
-  }
-  
-  .radio-option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .document-label {
-    margin: 0;
-  }
-  
-  .files {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-    margin-top: 20px;
-    margin-left: 20px;
-    
 
-  }
-  
-  .files2 label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 10px;
-   
-  }
-  .files2 {
-    display: none;
-    justify-content: left;
-    align-items: center;
-    flex-direction: column-reverse;
-    margin-top: 20px;
-    margin-left: 20px;
-    
+.nav__item span {
+  border: 2px solid white;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
 
-  }
-  
-  .files label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
-    gap: 30px;
-    margin-right: -885px;
-  }
-  
-  .back {
-    background-color: azure;
-    border: #fff;
-    width: 100px;
-    height: 50px;
-    border-radius: 8px;
-    outline: 1px solid black;
-  }
-  
-  .next {
-    background-color: #0076ff;
-    border: #0076ff;
-    color: #fff;
-    width: 120px;
-    height: 50px;
-    border-radius: 8px;
-  }
+.nav__item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  height: 48px;
+  background-color: white;
+  transform: translateY(100%);
+}
 
-  .additional-panels {
-    display: none;
-    margin-top: 20px;
-  }
-  .signature-pad {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #CCCCCC;
-    background-color: #FFFFFF;
+.nav__item:last-child::after {
+  content: none;
+}
+
+.step {
+  display: none;
+}
+
+.step__title {
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.step-active {
+  display: block;
+}
+
+.page__title {
+  font-size: 20px;
+}
+
+.text-field {
+  margin-top: 10px;
+  color: white;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.document-label {
+  margin: 0;
+}
+
+.files {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.files2 label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.files2 {
+  display: none;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.files label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.control {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.control__button {
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 144px;
+  font-size: 14px;
+}
+
+.control__button_prev {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.control__button_next {
+  background-color: #0076ff;
+  border: #0076ff;
+  color: white;
+}
+
+.additional-panels {
+  display: none;
+  margin-top: 20px;
+}
+.signature-pad {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #cccccc;
+  background-color: white;
 }
 
 .signature-pad canvas {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .signature-clear {
-    display: none;
+  display: none;
 }
 
 .signature-preview {
-    width: 200px;
-    height: 100px;
-    border: 1px solid #CCCCCC;
-    background-color: #FFFFFF;
-    position: absolute;
-    top: 200px;
-    left: 0;
+  width: 200px;
+  height: 100px;
+  border: 1px solid #cccccc;
+  background-color: white;
+  position: absolute;
+  top: 200px;
+  left: 0;
 }
 
 .signature-save {
-    display: none;
+  display: none;
 }
-  .next:hover {
-    cursor: pointer;
-  }
+
+.table {
+  margin: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
