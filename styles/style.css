@@ -54,7 +54,10 @@ input::-webkit-inner-spin-button {
 }
 
 .slider {
+  display: inline-block;
+  flex-direction: flex;
   position: relative;
+  vertical-align: middle;
   height: 100px;
 }
 
