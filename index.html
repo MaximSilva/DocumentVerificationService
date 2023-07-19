@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@3.0.0/signature_pad.min.js"></script>
+    
+
 </head>
 <body>
   <sidebar class="sidebar">
@@ -20,7 +23,7 @@
         <li class="nav__item"><span>2</span>РНОКПП</li>
         <li class="nav__item"><span>3</span>Фото Паспорта</li>
         <li class="nav__item"><span>4</span>Підтвердження даних</li>
-        <li class="nav__item"><span>5</span>Електронний підпис</li>
+        
     </ul>
 </sidebar>
 <main>
@@ -83,12 +86,12 @@
   <div class="step step-third">
       <h1 class="step__title">Паспорт:</h1>
       <div class="radio-option">
-          <input type="radio" id="reg" name="document-type" />
-          <label for="reg" class="document-label">Паспорт громадянина України(у формі ID карти)</label>
+          <input type="radio" id="ID" name="document-type" />
+          <label for="ID" class="document-label">Паспорт громадянина України(у формі ID карти)</label>
       </div>
       <div class="radio-option">
-          <input type="radio" id="driver" name="document-type" />
-          <label for="driver" class="document-label">Паспорт громадянина України</label>
+          <input type="radio" id="pass" name="document-type" />
+          <label for="pass" class="document-label">Паспорт громадянина України</label>
       </div>
       <div class="files">
           <label for="front">
@@ -121,12 +124,24 @@
   </div>
 
   <div class="step step-fourth">
-      <h1 class="step__title">Оберіть пункт зі списку нижче:</h1>
+    <form class ="signature-pad-from" action="#" method="POST">
+        <h1>ЕЦП-Підпис</h1>
+        <p>Підписуючи цю заяву ви надаєте своє підтвердження що всі документи вірні</p>
+
+        <p>
+            <b>Підпис</b>
+        </p>
+
+        <canvas height="100" width = "300" class = "signature-pad"></canvas>
+
+        <p>
+            <a href="#" class="clear-button">Очистити</a>
+        </p> 
+        <button class="submit-button" type="submit">Підтвердити </button>
+    </form>
+      
   </div>
 
-  <div class="step step-fifth">
-      <h1 class="step__title">Введіть свої дані:</h1>
-  </div>
 
   <div class="control">
       <button class="control__button control__button_prev" id="prevButton">Назад</button>
@@ -137,5 +152,8 @@
 <script src="scripts/services/renderService.js"></script>
 <script src="scripts/services/firstStepService.js"></script>
 <script src="scripts/services/thirdStepService.js"></script>
+<script src="scripts/services/signature.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@3.0.0/signature_pad.min.js"></script>
+</body>
 </body>
 </html>
