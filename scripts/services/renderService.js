@@ -19,11 +19,6 @@ const LOCALIZATION = [
         subTitle: 'Крок 4',
         description: 'Оберіть тип бланку для верифікації 4',
     },
-    {
-        title: 'Верифікація даних 5',
-        subTitle: 'Крок 5',
-        description: 'Оберіть тип бланку для верифікації 5',
-    },
 ];
 
 const steps = document.getElementsByClassName('step') || [];

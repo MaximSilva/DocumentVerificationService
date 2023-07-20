@@ -1,0 +1,19 @@
+{
+  "name": "document-verification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node sub.jsx", 
+    "build": "webpack --mode production", 
+    "dev": "npm run build && node sub.jsx"
+  },
+  "author": "MaxSilva",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
+
+

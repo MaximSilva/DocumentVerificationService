@@ -27,133 +27,136 @@
     </ul>
 </sidebar>
 <main>
-  <div class="step step-first">
-      <h1 class="step__title">Оберіть пункт зі списку нижче:</h1>
-      <div class="radio-option">
-          <input type="radio" id="step__reg-first" name="document-type" />
-          <label for="reg" class="document-label">Свідоцтво про реєстрацію машини (СпРТЗ)</label>
-      </div>
-      <div class="radio-option">
-          <input type="radio" id="driver" name="document-type" />
-          <label for="driver" class="document-label">Посвідчення водія (ПВ)</label>
-      </div>
-      <div class="files">
-          <label for="front">
-              <input type="file" name="front" />
-              <span>Зворотній бік</span>
-          </label>
-          <label for="back">
-              <input type="file" name="back" />
-              <span>Лицьовий бік</span>
-          </label>
-      </div>
-      <div class="input-fields">
-          <table>
-              <tr>
-                  <td><input type="text" placeholder="Серія" /></td>
-                  <td><input type="text" placeholder="Номер" /></td>
-              </tr>
-              <tr>
-                  <td><input type="date" placeholder="Дата видачі" /></td>
-              </tr>
-              <tr>
-                  <td><input type="text" placeholder="Ким видано" /></td>
-              </tr>
-          </table>
-      </div>
-  </div>
+    <div class="step step-first">
+        <h1 class="step__title">Оберіть пункт зі списку нижче:</h1>
+        <div class="radio-option">
+            <input type="radio" id="reg" name="document-type" />
+            <label for="reg" class="document-label">Свідоцтво про реєстрацію машини (СпРТЗ)</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" id="driver" name="document-type" />
+            <label for="driver" class="document-label">Посвідчення водія (ПВ)</label>
+        </div>
+        <div class="extra-options extra-options-first">
+            <div class="files">
+                <label for="front"> 
+                    <span>Зворотній бік</span>
+                    <input type="file" name="front" />
+                </label>
+                <label for="back"> 
+                    <span>Лицьовий бік</span>
+                    <input type="file" name="back" />
+                </label>
+            </div>
+            <div class="input-fields">
+                <table>
+                    <tr>
+                        <td><input type="text" placeholder="Серія" /></td> 
+                        <td><input type="text" placeholder="Номер" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" placeholder="Дата видачі" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Ким видано" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
-  <div class="step step-second">
-      <h1 class="step__title">Введіть свої дані:</h1>
-      <div class="input-fields">
-          <table>
-              <tr>
-                  <td><input type="text" placeholder="Електронна пошта" /></td>
-                  <td><input type="text" placeholder="Телефон" /></td>
-              </tr>
-              <tr>
-                  <td><input type="text" placeholder="Серія" /></td>
-                  <td><input type="text" placeholder="Номер" /></td>
-                  <td><input type="date" /></td>
-              </tr>
-              <tr>
-                  <td><input type="text" placeholder="Особа, яка видала" /></td>
-              </tr>
-          </table>
-      </div>
-  </div>
+    </div>
 
-  <div class="step step-third">
-      <h1 class="step__title">Паспорт:</h1>
-      <div class="radio-option">
-          <input type="radio" id="ID" name="document-type" />
-          <label for="ID" class="document-label">Паспорт громадянина України(у формі ID карти)</label>
-      </div>
-      <div class="radio-option">
-          <input type="radio" id="pass" name="document-type" />
-          <label for="pass" class="document-label">Паспорт громадянина України</label>
-      </div>
-      <div class="files">
-          <label for="front">
-              <input type="file" name="front" />
-              <span>Лицьовий бік</span>
-          </label>
-          <label for="back">
-              <input type="file" name="back" />
-              <span>Зворотній бік</span>
-          </label>
-      </div>
-      <div class="files2">
-          <label for="firstpage">
-              <input type="file" name="firstpage" />
-              <span>Перша сторінка(кому виданий)</span>
-          </label>
-          <label for="secondpage">
-              <input type="file" name="secondpage" />
-              <span>Друга сторінка(ким/коли/де виданий)</span>
-          </label>
-          <label for="photopage">
-              <input type="file" name="photopage" />
-              <span>Сторінка з фотографією, яка відповідає актуальному віку</span>
-          </label>
-          <label for="regpage">
-              <input type="file" name="regpage" />
-              <span>Сторінка з зазначенням, місця реєстрації</span>
-          </label>
-      </div>
-  </div>
+    <div class="step step-second">
+        <h1 class="step__title">Введіть свої дані:</h1>
+        <div class="input-fields">
+            <table>
+                <tr>
+                    <td><input type="text" placeholder="Електронна пошта" /></td>
+                    <td><input type="text" placeholder="Телефон" /></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Серія" /></td>
+                    <td><input type="text" placeholder="Номер" /></td>
+                    <td><input type="date" /></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Особа, яка видала" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
-  <div class="step step-fourth">
-    <form class ="signature-pad-from" action="#" method="POST">
-        <h1>ЕЦП-Підпис</h1>
-        <p>Підписуючи цю заяву ви надаєте своє підтвердження що всі документи вірні</p>
+    <div class="step step-third">
+        <h1 class="step__title">Паспорт:</h1>
+        <div class="radio-option">
+            <input type="radio" id="identity" name="document-type" />
+            <label for="identity" class="document-label">Паспорт громадянина України(у формі ID карти)</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" id="passport" name="document-type" />
+            <label for="passport" class="document-label">Паспорт громадянина України</label>
+        </div>
+        <div class="extra-options extra-options-third">
+            <div class="files">
+                <label for="front"> 
+                    <span>Лицьовий бік</span>
+                    <input type="file" name="front" />
+                </label>
+                <label for="back"> 
+                    <span>Зворотній бік</span>
+                    <input type="file" name="back" />
+                </label>
+            </div>
+        </div>
+            <div class="files2">
+                <label for="firstpage"> 
+                    Перша сторінка(кому виданий) 
+            </label> 
+            <input type="file" name="firstpage" />
+         </label>
+                <label for="secondpage"> 
+                    Друга сторінка(ким/коли/де виданий)  
+            </label> 
+            <input type="file" name="secondpage" />
+            <label for="photopage"> 
+                Сторінка з фотографією, яка відповідає актуальному віку
+        </label> 
+        <input type="file" name="photopage" />
+        <label for="regpage"> 
+            Cторінка з зазначенням, місця реєстрації
+    </label> 
+    <input type="file" name="regpage" />
+            </div>
+    </div>
 
-        <p>
-            <b>Підпис</b>
-        </p>
+    <div class="step step-fourth">
+        <form class="signature-pad-form" action="#" method="POST">
+            <h1 class="sign">ЕЦП-Підпис</h1>
+            
+            <p class="sign2">Підписуючи цю заяву ви надаєте своє підтвердження що всі документи вірні</p>
 
-        <canvas height="100" width = "300" class = "signature-pad"></canvas>
+            <p>
+                <b>Підпис</b>
+            </p>
 
-        <p>
-            <a href="#" class="clear-button">Очистити</a>
-        </p> 
-        <button class="submit-button" type="submit">Підтвердити </button>
-    </form>
-      
-  </div>
+            <canvas height="100" width="300" class="signature-pad"></canvas>
 
+            <p>
+                <a href="#" class="clear-button">Очистити</a>
+            </p>
+            <button class="submit-button" type="submit">Підтвердити </button>
+        </form>
+    </div>
 
-  <div class="control">
-      <button class="control__button control__button_prev" id="prevButton">Назад</button>
-      <button class="control__button control__button_next" id="nextButton">Наступний крок</button>
-  </div>
+    <div class="control">
+        <button class="control__button control__button_prev" id="prevButton">Назад</button>
+        <button class="control__button control__button_next" id="nextButton">Наступний крок</button>
+    </div>
 </main>
 
 <script src="scripts/services/renderService.js"></script>
 <script src="scripts/services/firstStepService.js"></script>
 <script src="scripts/services/thirdStepService.js"></script>
 <script src="scripts/services/signature.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/signature_pad@3.0.0/signature_pad.min.js"></script>
-</body>
 </body>
 </html>

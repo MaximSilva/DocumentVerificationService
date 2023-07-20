@@ -26,13 +26,11 @@ public class FormController {
                                @RequestParam("series") String series,
                                @RequestParam("number") String number,
                                @RequestParam("date") String date,
-                               @RequestParam("issuedBy") String issuedBy) {
+                               @RequestParam("issuedBy") String issuedBy,
+                               @RequestParam("signature") MultipartFile signatureFile) {
 
-        saveFiles(frontFile, backFile);
-
-        String zipFileName = "documents.zip";
-        packFilesToZip(zipFileName, frontFile, backFile);
-        emailSender.sendEmailWithAttachments("spimax002@gmail.com", "Заявка на верифікацію", "Дякуємо за заявку!", zipFileName);
+        MultipartFile[] files = {frontFile, backFile, signatureFile};
+        emailSender.sendEmailWithAttachments("spimax002@gmail.com", "Заявка на верифікацію", "Дякуємо за заявку!", files);
 
         return "Документи успішно збережено та відправлено на пошту.";
     }

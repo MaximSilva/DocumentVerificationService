@@ -2,7 +2,7 @@ body {
   background-color: azure;
   font-family: 'Helvetica', sans-serif;
   margin: 0;
-  display: flex;   
+  display: flex;
   min-height: 100vh;
 }
 * {
@@ -39,7 +39,6 @@ p {
   padding: 0;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -54,7 +53,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.sidebar {    
+.sidebar {
   padding: 32px;
   background-color: #009867;
   color: white;
@@ -81,6 +80,13 @@ input::-webkit-inner-spin-button {
   margin-top: 32px;
   gap: 48px;
 }
+
+.sign{
+  text-align: center;
+  margin: 20px;
+
+}
+
 
 .nav__item {
   position: relative;
@@ -142,6 +148,16 @@ input::-webkit-inner-spin-button {
 .text-field {
   margin-top: 10px;
   color: white;
+  gap: 20px;
+}
+.input-fields input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 12px;
+  width: 300px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
 }
 
 .radio-option {
@@ -155,12 +171,10 @@ input::-webkit-inner-spin-button {
 }
 
 .files {
-  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
   margin-top: 20px;
-  margin-left: 20px;
 }
 
 .files2 label {
@@ -173,7 +187,7 @@ input::-webkit-inner-spin-button {
   display: none;
   justify-content: left;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin-top: 20px;
   margin-left: 20px;
 }
@@ -214,24 +228,24 @@ input::-webkit-inner-spin-button {
   display: none;
   margin-top: 20px;
 }
-:root{
+:root {
   --primary-color: #000;
 }
 
-.signature-pad-form{
+.signature-pad-form {
   max-width: 300px;
   margin: 0 auto;
 }
 
-.signature-pad{
+.signature-pad {
   cursor: url(pen.png) 1 26, pointer;
   border: 2px solid var(--primary-color);
   border-radius: 4px;
 }
-.clear-button{
+.clear-button {
   color: var(--primary-color);
 }
-.submit-button{
+.submit-button {
   width: 100%;
   background-color: var(--primary-color);
   border: none;
@@ -240,14 +254,18 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   margin-top: 2rem;
 }
-@media(pointer: coarse){
-  body{
-    overflow: hidden;
+@media (pointer: coarse) {
+  body {
+      overflow: hidden;
   }
 }
 .table {
   margin: 10px;
   column-gap: 10px;
   row-gap: 10px;
+}
+
+.extra-options {
+  display: none;
 }
 

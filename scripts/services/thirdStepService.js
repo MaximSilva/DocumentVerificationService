@@ -1,25 +1,20 @@
-const docID = document.getElementById('ID');
-  const docPass = document.getElementById('pass');
-  const filesContainer = document.querySelector('.files');
-  const filesContainer2 = document.querySelector('.files2');
+const identityRadio = document.getElementById('identity');
+const passportRadio = document.getElementById('passport');
+const thirdExtraOptions = document.querySelector('.extra-options-third');
+const files2Div = document.querySelector('.files2');
 
-  docID.addEventListener('change', () => {
-    if (docID.checked) {
-      filesContainer.style.display = 'block';
-      filesContainer2.style.display = 'none';
+const thirdCheckInput = () => {
+    if (identityRadio.checked) {
+        thirdExtraOptions.style.display = 'block';
+        files2Div.style.display = 'none';
     } else {
-      filesContainer.style.display = 'none';
+        thirdExtraOptions.style.display = 'none';
+        files2Div.style.display = 'block';
     }
-  });
+};
 
-  docPass.addEventListener('change', () => {
-    if (docPass.checked) {
-      filesContainer2.style.display = 'block';
-      filesContainer.style.display = 'none';
-    } else {
-      filesContainer2.style.display = 'none';
-    }
-  });
+identityRadio.addEventListener('change', thirdCheckInput);
+passportRadio.addEventListener('change', thirdCheckInput);
          
       
           
